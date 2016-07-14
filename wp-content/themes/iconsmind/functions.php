@@ -19,3 +19,4 @@ add_action( 'admin_head', 'mojFavicon' );
 require_once( TEMPLATEINC . '/cpt.php' );
 require_once( TEMPLATEINC . '/template.php' );
 require_once( TEMPLATEINC . '/actions.php' );
+require_once( TEMPLATEINC . '/shortcode.php' );
