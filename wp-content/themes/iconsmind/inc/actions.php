@@ -105,6 +105,16 @@ function add_js()
         wp_enqueue_style('content', get_template_directory_uri() . '/dist/css/content-page.css');
         wp_enqueue_style('blog', get_template_directory_uri() . '/dist/css/blog-page.css');
     }
+    elseif(is_page_template(array('page-free-down.php','page-all-icons.php'))){
+        wp_enqueue_style('free', get_template_directory_uri() . '/dist/css/free-icons-page.css');
+    }
+    elseif(is_page_template('page-privacy.php')){
+        wp_enqueue_style('basic', get_template_directory_uri() . '/dist/css/basic.css');
+        wp_enqueue_style('content', get_template_directory_uri() . '/dist/css/content-page.css');
+    }
+    elseif(is_page_template('page-pricing.php')){
+        wp_enqueue_style('pricing', get_template_directory_uri() . '/dist/css/pricing.css');
+    }
     else {
         wp_enqueue_style('content', get_template_directory_uri() . '/dist/css/content-page.css');
     }

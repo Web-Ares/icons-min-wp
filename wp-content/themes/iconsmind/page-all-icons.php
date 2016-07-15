@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: About Page
+ * Template Name: All Icons Page
  */
 get_header('default'); ?>
 
@@ -14,7 +14,11 @@ get_header('default'); ?>
         <!-- head-title__inner -->
         <div class="head-title__inner">
 
-            <h1 class="site__title site__title_4">About us</h1>
+            <h1 class="site__title site__title_4">Preview 2,080 icons</h1>
+                <span class="head-title__subtitle">
+                    All icons come with two version line & solid
+                    <span>Total more then 4,000 icons.</span>
+                </span>
 
         </div>
         <!-- /head-title__inner -->
@@ -22,23 +26,19 @@ get_header('default'); ?>
     </div>
     <!-- /head-title -->
 
-    <!-- about-us -->
-    <div class="about-us">
+    <!-- icons-set -->
+    <div class="icons-set">
 
         <!-- site__center -->
         <div class="site__center">
 
-            <div class="content content_2">
-
-                <?php the_content(); ?>
-
-            </div>
-
+           <?php the_content(); ?>
+            <a href="#" class="btn btn_2 btn_2-1"><span>Buy now</span></a>
         </div>
         <!-- /site__center -->
 
     </div>
-    <!-- /about-us -->
+    <!-- /icons-set -->
 
 </div>
 <!-- /site__content -->
