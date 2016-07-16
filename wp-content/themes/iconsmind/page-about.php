@@ -14,7 +14,7 @@ get_header('default'); ?>
         <!-- head-title__inner -->
         <div class="head-title__inner">
 
-            <h1 class="site__title site__title_4">About us</h1>
+            <h1 class="site__title site__title_4"><?php the_title(); ?></h1>
 
         </div>
         <!-- /head-title__inner -->

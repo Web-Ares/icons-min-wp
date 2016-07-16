@@ -115,6 +115,12 @@ function add_js()
     elseif(is_page_template('page-pricing.php')){
         wp_enqueue_style('pricing', get_template_directory_uri() . '/dist/css/pricing.css');
     }
+    elseif(is_page_template('page-support.php')){
+        wp_enqueue_style('support', get_template_directory_uri() . '/dist/css/support.css');
+    }
+    elseif(is_page_template(array('page-thx-down.php','page-thx-buy.php'))){
+        wp_enqueue_style('thnx', get_template_directory_uri() . '/dist/css/thanks.css');
+    }
     else {
         wp_enqueue_style('content', get_template_directory_uri() . '/dist/css/content-page.css');
     }
@@ -125,6 +131,4 @@ wp_enqueue_style('style', get_template_directory_uri().'/style.css');
 
 
 if ( function_exists( 'add_theme_support' ) ) add_theme_support( 'post-thumbnails' );
-register_nav_menus( array(
-    'menu' => 'menu'
-) ); ?>
+register_nav_menus(); ?>

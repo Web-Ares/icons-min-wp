@@ -18,7 +18,11 @@
 
 if(is_singular('post')){
     $active = 'site_purple';
-} else {
+}
+elseif(is_page_template(array('page-thx-down.php','page-thx-buy.php'))){
+    $active = 'site_white';
+}
+else {
     $active = 'site_black';
 }
 ?>
@@ -405,7 +409,7 @@ if(is_singular('post')){
             <!-- header-menu__mobile-item -->
             <a href="#" class="site__header__mobile-item">ICONS</a>
             <!-- /header-menu__mobile-item -->
-
+            <?php if(!is_page_template('page-pricing.php')): ?>
             <!-- header-menu__item -->
             <a href="#" class="site__header__item">View Icons</a>
             <!-- /header-menu__item -->
@@ -413,7 +417,7 @@ if(is_singular('post')){
             <!-- header-menu__item -->
             <a href="#" class="site__header__item">Pricing</a>
             <!-- /header-menu__item -->
-
+            <?php endif; ?>
             <!-- site__header__menu-drop -->
             <a class="site__header__menu-btn" href="#"><span></span></a>
             <!-- /site__header__menu-drop -->

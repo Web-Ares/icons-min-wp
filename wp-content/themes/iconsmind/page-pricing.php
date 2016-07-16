@@ -14,12 +14,8 @@ get_header('default'); ?>
         <!-- head-title__inner -->
         <div class="head-title__inner">
 
-            <h1 class="site__title site__title_4">Purchase</h1>
-            <span class="head-title__subtitle">The Biggest Icons Pack. In other words, you will never have to purchase icons again!</span>
-
-            <!-- head-title__back-money -->
-            <span class="head-title__back-money">30 Days money back guarantee!</span>
-            <!-- /head-title__back-money -->
+            <h1 class="site__title site__title_4"><?php the_title(); ?></h1>
+            <?php the_field('header_content'); ?>
 
         </div>
         <!-- /head-title__inner -->
