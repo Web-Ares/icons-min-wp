@@ -18,6 +18,7 @@ function get_menus($post_id, $menu_name)
     if ($menu_name == 'bottom_menu') {
         $menu_class = 'drop-menu__legally';
     }
+
     $menu_list = '<ul class="' . $menu_class . '">';
 
     foreach ((array)$menu_items as $key => $menu_item) {
@@ -82,22 +83,10 @@ function similar_posts($post_id = false)
 
 }
 
-function posts_link_next_class($format)
-{
-    $format = str_replace('href=', 'class="pagination__next" href=', $format);
-    return $format;
-}
+
 
 add_filter('next_post_link', 'posts_link_next_class');
-
-function posts_link_prev_class($format)
-{
-    $format = str_replace('href=', 'class="pagination__prev" href=', $format);
-    return $format;
-}
-
 add_filter('previous_post_link', 'posts_link_prev_class');
-
 add_filter('next_posts_link_attributes', 'posts_link_attributes_1');
 add_filter('previous_posts_link_attributes', 'posts_link_attributes_2');
 
@@ -105,49 +94,21 @@ function posts_link_attributes_1()
 {
     return 'class="pagination__next"';
 }
-
+function posts_link_next_class($format)
+{
+    $format = str_replace('href=', 'class="pagination__next" href=', $format);
+    return $format;
+}
 function posts_link_attributes_2()
 {
     return 'class="pagination__prev"';
 }
-
-
-function get_menus($post_id, $menu_name)
+function posts_link_prev_class($format)
 {
-    $menu_items = wp_get_nav_menu_items($menu_name, array(
-        'orderby' => 'menu_order',
-        'post_type' => 'nav_menu_item',
-        'post_status' => 'publish',
-        'output' => ARRAY_A,
-        'output_key' => 'menu_order',
-        'update_post_term_cache' => false));
-    $menu_class = 'drop-menu__menu';
-
-    if ($menu_name == 'middle_menu') {
-        $menu_class = 'drop-menu__navigation';
-    }
-    if ($menu_name == 'bottom_menu') {
-        $menu_class = 'drop-menu__legally';
-    }
-    $menu_list = '<ul class="' . $menu_class . '">';
-
-    foreach ((array)$menu_items as $key => $menu_item) {
-
-        if ($post_id == $menu_item->object_id) {
-            $class = "class='active " . $menu_item->classes[0] . "'";
-        } else {
-            $class = "class = '" . $menu_item->classes[0] . "'";
-        }
-
-
-        $title = $menu_item->title;
-        $url = $menu_item->url;
-
-        $menu_list .= '<li><a ' . $class . ' href="' . $url . '">' . $title . '</a></li>';
-
-    }
-    return $menu_list . '</ul>';
+    $format = str_replace('href=', 'class="pagination__prev" href=', $format);
+    return $format;
 }
+
 
 if (!function_exists('adoric_post_nav')) :
 

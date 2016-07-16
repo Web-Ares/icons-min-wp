@@ -405,17 +405,17 @@ else {
                 <!-- /logo -->
             <?php } ?>
 
-
+            <?php $view= get_permalink(77); ?>
             <!-- header-menu__mobile-item -->
-            <a href="#" class="site__header__mobile-item">ICONS</a>
+            <a href="<?=  $view; ?>" class="site__header__mobile-item">ICONS</a>
             <!-- /header-menu__mobile-item -->
-            <?php if(!is_page_template('page-pricing.php')): ?>
-            <!-- header-menu__item -->
-            <a href="#" class="site__header__item">View Icons</a>
-            <!-- /header-menu__item -->
 
             <!-- header-menu__item -->
-            <a href="#" class="site__header__item">Pricing</a>
+            <a href="<?=  $view; ?>" class="site__header__item">View Icons</a>
+            <!-- /header-menu__item -->
+            <?php if(!is_page_template('page-pricing.php') && !is_singular('post') && !is_home() ): ?>
+            <!-- header-menu__item -->
+            <a href="<?= get_permalink(93); ?>" class="site__header__item">Pricing</a>
             <!-- /header-menu__item -->
             <?php endif; ?>
             <!-- site__header__menu-drop -->
@@ -436,29 +436,15 @@ else {
                     <div id="scroll-wrap">
 
                         <!-- drop-menu__menu -->
-                        <ul class="drop-menu__menu">
-                            <li><a href="#" class="drop-menu__menu-item">View icons</a></li>
-                            <li><a href="#" class="drop-menu__menu-item">Pricing</a></li>
-                        </ul>
+                        <?php echo get_menus($post->ID, 'top_menu'); ?>
                         <!-- /drop-menu__menu -->
 
                         <!-- drop-menu__navigation -->
-                        <ul class="drop-menu__navigation">
-                            <li><a href="#" class="drop-menu__navigation-item">About</a></li>
-                            <li><a href="#" class="drop-menu__navigation-item">Blog</a></li>
-                            <li><a href="#" class="drop-menu__navigation-item">Support</a></li>
-                            <li><a href="#" class="drop-menu__navigation-item">Video</a></li>
-                            <li><a href="#" class="drop-menu__navigation-item">Try free pack</a></li>
-                        </ul>
+                        <?php echo get_menus($post->ID, 'middle_menu'); ?>
                         <!-- /drop-menu__navigation -->
 
                         <!-- drop-menu__legally -->
-                        <ul class="drop-menu__legally">
-                            <li><a href="#" class="drop-menu__legally-item">Classic license</a></li>
-                            <li><a href="#" class="drop-menu__legally-item">Extended license</a></li>
-                            <li><a href="#" class="drop-menu__legally-item">Terms of use</a></li>
-                            <li><a href="#" class="drop-menu__legally-item">Privicy policy</a></li>
-                        </ul>
+                        <?php echo get_menus($post->ID, 'bottom_menu'); ?>
                         <!-- /drop-menu__legally -->
 
                     </div>

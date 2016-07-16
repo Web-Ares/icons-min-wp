@@ -33,7 +33,7 @@ get_header('default'); ?>
         <div class="site__center">
 
            <?php the_content(); ?>
-            <a href="#" class="btn btn_2 btn_2-1"><span>Buy now</span></a>
+            <a href="<?= get_the_permalink(93)?>" class="btn btn_2 btn_2-1"><span>Buy now</span></a>
         </div>
         <!-- /site__center -->
 
