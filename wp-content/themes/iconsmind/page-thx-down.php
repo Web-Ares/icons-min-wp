@@ -48,7 +48,7 @@ get_header('default'); ?>
                                 <!-- sponsors__inner -->
                                 <a href="<?= $var; ?>" class="sponsors__item">
 
-                                    <img src="http://icons-mind-wp/wp-content/themes/iconsmind/dist/pic/sponsor1.png" width="64" height="25" alt="">
+                                    <img src="http://iconsmind.websters.com.ua/wp-content/themes/iconsmind/dist/pic/sponsor1.png" width="64" height="25" alt="">
 
                                 </a>
                                 <!-- /sponsors__inner -->
@@ -58,7 +58,7 @@ get_header('default'); ?>
                                 <!-- sponsors__inner -->
                                 <a href="<?= $var; ?>"  class="sponsors__item">
 
-                                    <img src="http://icons-mind-wp/wp-content/themes/iconsmind/dist/pic/sponsor2.png" width="165" height="27" alt="">
+                                    <img src="http://iconsmind.websters.com.ua/wp-content/themes/iconsmind/dist/pic/sponsor2.png" width="165" height="27" alt="">
 
                                 </a>
                                 <!-- /sponsors__inner -->
@@ -68,7 +68,7 @@ get_header('default'); ?>
                                 <!-- sponsors__inner -->
                                 <a href="<?= $var; ?>"  class="sponsors__item">
 
-                                    <img src="http://icons-mind-wp/wp-content/themes/iconsmind/dist/pic/sponsor3.png" width="143" height="35" alt="">
+                                    <img src="http://iconsmind.websters.com.ua/wp-content/themes/iconsmind/dist/pic/sponsor3.png" width="143" height="35" alt="">
 
                                 </a>
                                 <!-- /sponsors__inner -->
@@ -78,7 +78,7 @@ get_header('default'); ?>
                                 <!-- sponsors__inner -->
                                 <a href="<?= $var; ?>"  class="sponsors__item">
 
-                                    <img src="http://icons-mind-wp/wp-content/themes/iconsmind/dist/pic/sponsor4.png" width="116" height="34" alt="">
+                                    <img src="http://iconsmind.websters.com.ua/wp-content/themes/iconsmind/dist/pic/sponsor4.png" width="116" height="34" alt="">
 
                                 </a>
                                 <!-- /sponsors__inner -->
@@ -88,7 +88,7 @@ get_header('default'); ?>
                                 <!-- sponsors__inner -->
                                 <a href="<?= $var; ?>"  class="sponsors__item">
 
-                                    <img src="http://icons-mind-wp/wp-content/themes/iconsmind/dist/pic/sponsor5.png" width="62" height="33" alt="">
+                                    <img src="http://iconsmind.websters.com.ua/wp-content/themes/iconsmind/dist/pic/sponsor5.png" width="62" height="33" alt="">
 
                                 </a>
                                 <!-- /sponsors__inner -->
@@ -98,7 +98,7 @@ get_header('default'); ?>
                                 <!-- sponsors__inner -->
                                 <a href="<?= $var; ?>"  class="sponsors__item">
 
-                                    <img src="http://icons-mind-wp/wp-content/themes/iconsmind/dist/pic/sponsor6.png" width="122" height="34" alt="">
+                                    <img src="http://iconsmind.websters.com.ua/wp-content/themes/iconsmind/dist/pic/sponsor6.png" width="122" height="34" alt="">
 
                                 </a>
                                 <!-- /sponsors__inner -->
