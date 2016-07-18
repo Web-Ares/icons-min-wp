@@ -14,9 +14,7 @@ span.wpcf7-not-valid-tip {
     font-size: 1em;
     display: none !important;
 }
-.wpcf7-not-valid {
-    border: 1px solid red !important;
-}
+
 h3#reply-title {
     display: none !important;
 }
@@ -58,8 +56,9 @@ p.logged-in-as a {
 .content_error a{
     color: #fec303;
 }
-
-
+.wpcf7-response-output{
+    display: none !important;
+}
 
 
 .comments_custom {
@@ -87,4 +86,8 @@ div.wpcf7-mail-sent-ng {
 }
 span.wpcf7-list-item {
     margin-left: 0 !important;
+}
+
+fieldset.novalid {
+    border-bottom: 2px solid #b61010 !important;
 }

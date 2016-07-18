@@ -33,29 +33,7 @@ get_header('default'); ?>
             <!-- contact-us__form -->
             <div class="contact-us__form">
 
-                <form method="get" action="#">
-
-                    <fieldset>
-                        <input type="text" name="contact-us__form__name" class="contact-us__form__name" placeholder="Full Name"/>
-                    </fieldset>
-
-                    <fieldset>
-                        <input type="email" name="contact-us__form__email" class="contact-us__form__email" placeholder="Email Adress"/>
-                    </fieldset>
-
-                    <fieldset class="message-field">
-
-                        <div class="message-field__text"></div>
-
-                        <div class="message-field__height"></div>
-
-                        <textarea name="contact-us__form__message" class="contact-us__form__message" placeholder="Message"></textarea>
-
-                    </fieldset>
-
-                    <button type="submit" name="form__send" class="btn btn_5"><span>Send</span></button>
-
-                </form>
+               <?= do_shortcode( '[contact-form-7 id="10" title="Supports form"]' ); ?>
 
             </div>
             <!-- /contact-us__form -->
@@ -246,7 +224,8 @@ get_header('default'); ?>
                 </div>
                 <!-- /contact-us__logo -->
 
-              <?php the_field('content'); ?>
+              <?php the_field('address_data'); ?>
+                
             </div>
             <!-- /contact-us__address -->
 

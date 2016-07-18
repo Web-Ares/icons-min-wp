@@ -35,7 +35,7 @@ get_header(); ?>
         <!-- /hero__inner -->
 
         <!-- hero__video -->
-        <div class="hero__video" style="background: url(<?= DIRECT; ?>img/home-cover.jpg)">
+        <div class="hero__video" style="background-image: url(<?= DIRECT; ?>img/home-cover.jpg)">
 
 
 

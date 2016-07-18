@@ -14,11 +14,13 @@ get_header('default'); ?>
         <!-- head-title__inner -->
         <div class="head-title__inner">
 
-            <h1 class="site__title site__title_4">Preview 2,080 icons</h1>
+            <h1 class="site__title site__title_4"><?php echo do_shortcode(get_the_title()); ?></h1>
                 <span class="head-title__subtitle">
                     All icons come with two version line & solid
                     <span>Total more then 4,000 icons.</span>
                 </span>
+
+
 
         </div>
         <!-- /head-title__inner -->
@@ -32,7 +34,35 @@ get_header('default'); ?>
         <!-- site__center -->
         <div class="site__center">
 
-           <?php the_content(); ?>
+           <?php
+
+            $args = array(
+            'posts_per_page' => -1,
+            'post_type' => 'icons',
+            'post_status' => 'publish'
+            );
+
+            $q = new WP_Query($args);
+
+            while ($q->have_posts()) {
+            $q->the_post();
+            $icons_title = get_the_title(); ?>
+
+                <!-- icons-set__title -->
+                <div class="icons-set__title"><?= $icons_title; ?></div>
+                <!-- /icons-set__title -->
+
+                <!-- icons-set__pic -->
+                <div class="icons-set__pic">
+                    <img src="<?php the_field('add_preview_categories_image'); ?>" width="800" height="336" alt="images"/>
+                </div>
+                <!-- /icons-set__pic -->
+
+
+            <?php }
+
+           wp_reset_query(); ?>
+
             <a href="<?= get_the_permalink(93)?>" class="btn btn_2 btn_2-1"><span>Buy now</span></a>
         </div>
         <!-- /site__center -->

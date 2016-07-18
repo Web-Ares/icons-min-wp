@@ -43,6 +43,14 @@ remove_action('wp_head', 'wp_oembed_add_discovery_links');
 add_filter('the_content', 'do_shortcode');
 add_filter('wpcf7_form_elements', 'do_shortcode');
 
+
+//add_filter( 'upload_mimes', 'allow_svg_upload_mimes' );
+
+
+add_filter('the_title', 'do_shortcode');
+add_filter('single_post_title', 'do_shortcode');
+
+
 if (function_exists('acf_add_options_page')) {
     acf_add_options_page();
 }
@@ -123,12 +131,101 @@ function add_js()
     }
     else {
         wp_enqueue_style('content', get_template_directory_uri() . '/dist/css/content-page.css');
+        wp_enqueue_style('about_us', get_template_directory_uri() . '/dist/css/about.css');
     }
   
     
 }
 wp_enqueue_style('style', get_template_directory_uri().'/style.css');
 
+function count_icons()
+{
+    return COUNT_ICONS;
+}
+
+add_shortcode('count_icons', 'count_icons');
+
+function count_categories()
+{
+    return COUNT_CATEGORIES;
+}
+
+add_shortcode('count_categories', 'count_categories');
+
 
 if ( function_exists( 'add_theme_support' ) ) add_theme_support( 'post-thumbnails' );
-register_nav_menus(); ?>
+register_nav_menus();
+
+
+
+
+function ssd_admin_clean_up(){
+//    remove_menu_page( 'edit.php?post_type=page');
+    remove_menu_page( 'edit-comments.php');
+//    remove_menu_page( 'wpcf7');
+//    remove_menu_page( 'acf');
+//    remove_menu_page( 'edit.php?post_type=acf-field-group' );
+}
+add_action('admin_menu', 'ssd_admin_clean_up');
+
+add_action('wp_ajax_mchimp', 'mchimp');
+add_action('wp_ajax_nopriv_mchimp', 'mchimp');
+
+/**
+ *
+ */
+function mchimp()
+{
+    $email = $_POST['EMAIL'];
+
+    if(!email_check($email)){
+        die('{"result":"error"}');
+    }else{
+        require_once( TEMPLATEINC . '/MCAPI.class.php' );
+        $api = new MCAPI('75862ef22e3827c5baf7033a2bf62c81-us4');
+        $merge_vars = array('double_optin'=>false);
+        $retval = $api->listSubscribe( '9af64abdb1', $email, $merge_vars, 'html', false, true );
+        if ($api->errorCode){
+            die('{"result":"error"}');
+        } else {
+            die('{"result":"success"}');
+        }
+        die('{"result":"error"}');
+    }
+
+}
+
+function email_check($email)
+{
+    if (!preg_match("/^(?:[a-z0-9]+(?:[-_.]?[a-z0-9]+)?@[a-z0-9_.-]+(?:\.?[a-z0-9]+)?\.[a-z]{2,5})$/i", trim($email))) {
+        return false;
+    } else return true;
+}
+
+function favicons(){
+    
+    return '
+	<link rel="shortcut icon" href="'.TEMPLATEURI.'/favicon.ico">
+	<link rel="icon" sizes="16x16 32x32 64x64" href="'.TEMPLATEURI.'/favicon.ico">
+	<link rel="icon" type="image/png" sizes="196x196" href="'.TEMPLATEURI.'/favicon-192.png">
+	<link rel="icon" type="image/png" sizes="160x160" href="'.TEMPLATEURI.'/favicon-160.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="'.TEMPLATEURI.'/favicon-96.png">
+	<link rel="icon" type="image/png" sizes="64x64" href="'.TEMPLATEURI.'/favicon-64.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="'.TEMPLATEURI.'/favicon-32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="'.TEMPLATEURI.'/favicon-16.png">
+	<link rel="apple-touch-icon" href="'.TEMPLATEURI.'/favicon-57.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="'.TEMPLATEURI.'/favicon-114.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="'.TEMPLATEURI.'/favicon-72.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="'.TEMPLATEURI.'/favicon-144.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="'.TEMPLATEURI.'/favicon-60.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="'.TEMPLATEURI.'/favicon-120.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="'.TEMPLATEURI.'/favicon-76.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="'.TEMPLATEURI.'/favicon-152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="'.TEMPLATEURI.'/favicon-180.png">
+	<meta name="msapplication-TileColor" content="#FFFFFF">
+	<meta name="msapplication-TileImage" content="'.TEMPLATEURI.'/favicon-144.png">
+	<meta name="msapplication-config" content="'.TEMPLATEURI.'/browserconfig.xml">
+    ';
+}
+
+?>

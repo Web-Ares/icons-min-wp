@@ -5,7 +5,8 @@
         <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
         <meta name="format-detection" content="telephone=no">
         <meta name="format-detection" content="address=no">
-
+        
+        <?= favicons(); ?>
         <title><?php document_title(); ?></title>
         <?php wp_head(); ?>
 

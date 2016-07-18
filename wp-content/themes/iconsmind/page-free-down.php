@@ -80,16 +80,18 @@ get_header('default'); ?>
 
             <!-- download-icons -->
             <div class="download-icons">
-                <form action="#">
+                <form action="//vectorain.us4.list-manage.com/subscribe/post?u=61927fc103d96b8ec388bf0fe&amp;id=9af64abdb1" method="post" data-thank = "/thanks-for-download/" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank>
 
-                    <!-- download-icons__title -->
-                    <span class="download-icons__title">Subscribe to our newsletter to get your free 100 icons</span>
-                    <!-- /download-icons__title -->
+                <!-- download-icons__title -->
+                <span class="download-icons__title">Subscribe to our newsletter to get your free 100 icons</span>
+                <!-- /download-icons__title -->
 
-                    <input type="text" placeholder="E-mail"/>
-                    <button type="submit" class="btn btn_3"><span>Download</span></button>
+                <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="E-mail" required/>
+                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_61927fc103d96b8ec388bf0fe_9af64abdb1" tabindex="-1" value=""></div>
+                <button type="submit" id="mc-embedded-subscribe" class="btn btn_3"><span>Download</span></button>
 
                 </form>
+
             </div>
             <!-- /download-icons -->
 

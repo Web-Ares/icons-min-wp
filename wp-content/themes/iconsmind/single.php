@@ -173,19 +173,18 @@
                 </div>
                 <!-- /author -->
                 <?php endif; ?>
+
                 <!-- comments -->
                 <div class="comments">
-    
-                    <!-- comments__title -->
-                    <h2 class="comments__title">Comments</h2>
-                    <!-- /comments__title -->
-    
+                    
                     <!-- comments__frame -->
-                    <div class="comments__frame" style="height: 343px; background: #e6e5e5">
-    
+                    <div class="comments__frame">
+
+                        <?php echo do_shortcode('[fbcomments]'); ?>
+
                     </div>
                     <!-- /comments__frame -->
-    
+
                 </div>
                 <!-- /comments -->
 

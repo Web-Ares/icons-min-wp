@@ -21,7 +21,7 @@ get_header('default'); ?>
             </div>
 
             <div>
-                <a href="#" class="btn btn_8"><span>Upgrade for full access</span></a>
+                <a href="<?= get_permalink(93); ?>" class="btn btn_8"><span>Upgrade for full access</span></a>
 
                 <div class="thank-you__video">
 
@@ -31,7 +31,7 @@ get_header('default'); ?>
 
                     <!-- hero__icons -->
                     <div class="hero__icons">
-                        <img src="pic/hero-icons.jpg" width="1342" height="318" alt="">
+                        <img src="<?= DIRECT; ?>pic/hero-icons.jpg" width="1342" height="318" alt="">
                     </div>
                     <!-- /hero__icons -->
 
@@ -44,55 +44,65 @@ get_header('default'); ?>
                     <!-- sponsors__inner -->
                     <div class="sponsors__inner">
                         <div>
+                            <?php if($var=get_field('wix',8)): ?>
+                                <!-- sponsors__inner -->
+                                <a href="<?= $var; ?>" class="sponsors__item">
 
-                            <!-- sponsors__inner -->
-                            <a href="#" class="sponsors__item">
+                                    <img src="http://icons-mind-wp/wp-content/themes/iconsmind/dist/pic/sponsor1.png" width="64" height="25" alt="">
 
-                                <img src="pic/sponsor1.png" width="64" height="25" alt="">
+                                </a>
+                                <!-- /sponsors__inner -->
+                            <?php endif;
+                            if($var=get_field('bookingcom',8)):
+                                ?>
+                                <!-- sponsors__inner -->
+                                <a href="<?= $var; ?>"  class="sponsors__item">
 
-                            </a>
-                            <!-- /sponsors__inner -->
+                                    <img src="http://icons-mind-wp/wp-content/themes/iconsmind/dist/pic/sponsor2.png" width="165" height="27" alt="">
 
-                            <!-- sponsors__inner -->
-                            <a href="#"  class="sponsors__item">
+                                </a>
+                                <!-- /sponsors__inner -->
+                            <?php endif;
+                            if($var=get_field('lyndacom',8)):
+                                ?>
+                                <!-- sponsors__inner -->
+                                <a href="<?= $var; ?>"  class="sponsors__item">
 
-                                <img src="pic/sponsor2.png" width="165" height="27" alt="">
+                                    <img src="http://icons-mind-wp/wp-content/themes/iconsmind/dist/pic/sponsor3.png" width="143" height="35" alt="">
 
-                            </a>
-                            <!-- /sponsors__inner -->
+                                </a>
+                                <!-- /sponsors__inner -->
+                            <?php endif;
+                            if($var=get_field('heroku',8)):
+                                ?>
+                                <!-- sponsors__inner -->
+                                <a href="<?= $var; ?>"  class="sponsors__item">
 
-                            <!-- sponsors__inner -->
-                            <a href="#"  class="sponsors__item">
+                                    <img src="http://icons-mind-wp/wp-content/themes/iconsmind/dist/pic/sponsor4.png" width="116" height="34" alt="">
 
-                                <img src="pic/sponsor3.png" width="143" height="35" alt="">
+                                </a>
+                                <!-- /sponsors__inner -->
+                            <?php endif;
+                            if($var=get_field('cisco',8)):
+                                ?>
+                                <!-- sponsors__inner -->
+                                <a href="<?= $var; ?>"  class="sponsors__item">
 
-                            </a>
-                            <!-- /sponsors__inner -->
+                                    <img src="http://icons-mind-wp/wp-content/themes/iconsmind/dist/pic/sponsor5.png" width="62" height="33" alt="">
 
-                            <!-- sponsors__inner -->
-                            <a href="#"  class="sponsors__item">
+                                </a>
+                                <!-- /sponsors__inner -->
+                            <?php endif;
+                            if($var=get_field('frank_digital',8)):
+                                ?>
+                                <!-- sponsors__inner -->
+                                <a href="<?= $var; ?>"  class="sponsors__item">
 
-                                <img src="pic/sponsor4.png" width="116" height="34" alt="">
+                                    <img src="http://icons-mind-wp/wp-content/themes/iconsmind/dist/pic/sponsor6.png" width="122" height="34" alt="">
 
-                            </a>
-                            <!-- /sponsors__inner -->
-
-                            <!-- sponsors__inner -->
-                            <a href="#"  class="sponsors__item">
-
-                                <img src="pic/sponsor5.png" width="62" height="33" alt="">
-
-                            </a>
-                            <!-- /sponsors__inner -->
-
-                            <!-- sponsors__inner -->
-                            <a href="#"  class="sponsors__item">
-
-                                <img src="pic/sponsor6.png" width="122" height="34" alt="">
-
-                            </a>
-                            <!-- /sponsors__inner -->
-
+                                </a>
+                                <!-- /sponsors__inner -->
+                            <?php endif; ?>
                         </div>
                     </div>
                     <!-- /sponsors__inner -->
