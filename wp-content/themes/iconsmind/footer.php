@@ -16,5 +16,39 @@
 </div>
 <!-- /site -->
 
+<!-- popup -->
+<div class="popup">
+
+    <!-- popup__wrap -->
+    <div class="popup__wrap">
+
+        <!-- popup__content -->
+        <div class="popup__content popup__video">
+
+            <!-- video-popup__content -->
+            <div class="video-popup__content">
+
+                <span class="popup__close">close</span>
+
+                <div class="video-popup__frame">
+                    <div>
+                        <iframe width="420" height="315" src="https://www.youtube.com/embed/lcFYdgZKZxY" frameborder="0" allowfullscreen></iframe>                    </div>
+                </div>
+
+            </div>
+            <!-- /video-popup__content -->
+
+        </div>
+        <!-- /popup__content -->
+
+    </div>
+    <!-- /popup__wrap -->
+
+</div>
+<!-- /popup -->
+
+
+
+
 </body>
 </html>

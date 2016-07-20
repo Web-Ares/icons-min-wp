@@ -26,7 +26,7 @@ get_header('default'); ?>
                 <div class="thank-you__video">
 
                     <!-- hero__play -->
-                    <a href="#" class="hero__play"></a>
+                    <a href="#" class="hero__play popup__open" data-popup="video"></a>
                     <!-- hero__play -->
 
                     <!-- hero__icons -->
@@ -121,4 +121,4 @@ get_header('default'); ?>
 <!-- /site__content -->
 
 
-<?php get_footer('default'); ?>
+<?php get_footer(); ?>

@@ -20,7 +20,7 @@
 
             <!-- social-networks -->
             <div class="social-networks social-networks_center">
-                <a href="#" target="_blank" class="social-networks__item">
+                <a href="https://www.facebook.com/iconsmind7" target="_blank" class="social-networks__item">
 
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                          viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
@@ -29,7 +29,7 @@
                             </svg>
 
                 </a>
-                <a href="#" target="_blank" class="social-networks__item">
+                <a href="https://twitter.com/icons_mind" target="_blank" class="social-networks__item">
 
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                          viewBox="0 0 512.002 512.002" style="enable-background:new 0 0 512.002 512.002;"
@@ -45,7 +45,7 @@
                             </svg>
 
                 </a>
-                <a href="#" target="_blank" class="social-networks__item">
+                <a href="https://plus.google.com/101866714941738670175" target="_blank" class="social-networks__item">
 
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                          viewBox="0 0 508.52 508.52" style="enable-background:new 0 0 508.52 508.52;" xml:space="preserve">
@@ -81,7 +81,9 @@
             <!-- blog__posts -->
             <div class="blog__posts">
 
-                <?php if ( have_posts() ) :  ?>
+                <?php
+                query_posts('posts_per_page=-1');
+                if ( have_posts() ) :  ?>
 
                         <!-- blog__posts-list -->
                         <ol class="blog__posts-list">
@@ -110,4 +112,4 @@
 <!-- /site__content -->
 
 
-<?php get_footer('default'); ?>
+<?php get_footer(); ?>

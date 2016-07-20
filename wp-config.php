@@ -1,4 +1,9 @@
 <?php
+/** Enable W3 Total Cache Edge Mode */
+define('WP_CACHE', true); //Added by WP-Cache Manager
+define('W3TC_EDGE_MODE', true); // Added by W3 Total Cache
+
+
 /**
  * The base configuration for WordPress
  *
@@ -20,6 +25,8 @@
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
+ //Added by WP-Cache Manager
+
 define('DB_NAME', 'mind_icon');
 
 /** MySQL database username */

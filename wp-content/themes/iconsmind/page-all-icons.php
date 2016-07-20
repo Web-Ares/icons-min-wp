@@ -20,8 +20,6 @@ get_header('default'); ?>
                     <span>Total more then 4,000 icons.</span>
                 </span>
 
-
-
         </div>
         <!-- /head-title__inner -->
 
@@ -74,4 +72,4 @@ get_header('default'); ?>
 <!-- /site__content -->
 
 
-<?php get_footer('default'); ?>
+<?php get_footer(); ?>

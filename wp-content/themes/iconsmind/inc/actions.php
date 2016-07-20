@@ -92,7 +92,7 @@ function add_js()
 
         wp_enqueue_script('twenty');
 
-        
+
 
 
         wp_register_script('index',get_template_directory_uri().'/dist/js/index.min.js');
@@ -121,6 +121,7 @@ function add_js()
         wp_enqueue_style('content', get_template_directory_uri() . '/dist/css/content-page.css');
     }
     elseif(is_page_template('page-pricing.php')){
+
         wp_enqueue_style('pricing', get_template_directory_uri() . '/dist/css/pricing.css');
     }
     elseif(is_page_template('page-support.php')){

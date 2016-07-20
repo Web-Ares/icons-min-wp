@@ -21,12 +21,13 @@ get_header(); ?>
 
 
             <!-- hero__play -->
-            <a href="#" class="hero__play"></a>
+            <a href="#" class="hero__play popup__open" data-popup="video"></a>
             <!-- hero__play -->
 
             <!-- hero__icons -->
             <div class="hero__icons">
-                <img src=" <?= get_field('choose_the_image_in_header_of_the_page'); ?>" alt="Preview Icons">
+                
+                <img src="<?= get_field('choose_the_image_in_header_of_the_page'); ?>" alt="Preview Icons">
 
             </div>
             <!-- /hero__icons -->

@@ -33,7 +33,14 @@ function get_menus($post_id, $menu_name)
         $title = $menu_item->title;
         $url = $menu_item->url;
 
-        $menu_list .= '<li><a ' . $class . ' href="' . $url . '">' . $title . '</a></li>';
+        if ($menu_item->classes[0]=='popup__open'){
+            $class = "class='" . 'drop-menu__navigation-item '.$menu_item->classes[0] . "'";
+            $menu_list .= '<li><a ' . $class . ' data-popup="video" href="' . $url . '">' . $title . '</a></li>';
+        } else {
+            $menu_list .= '<li><a ' . $class . ' href="' . $url . '">' . $title . '</a></li>';
+        }
+
+
 
     }
     return $menu_list . '</ul>';

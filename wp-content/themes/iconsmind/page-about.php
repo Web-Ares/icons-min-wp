@@ -44,4 +44,4 @@ get_header('default'); ?>
 <!-- /site__content -->
 
 
-<?php get_footer('default'); ?>
+<?php get_footer(); ?>

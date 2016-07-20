@@ -13,6 +13,17 @@
     </head>
     <body>
 
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-MLHR9P"
+                      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MLHR9P');</script>
+    <!-- End Google Tag Manager -->
+    
+    
     <?php if (is_page() || is_single() || is_singular() || is_404()) {
         the_post();
     } ?>
@@ -451,10 +462,10 @@
 
                 <!-- social -->
                 <div class="social">
-                    <a href="#" target="_blank" class="social__item social__item_mail"></a>
-                    <a href="#" target="_blank" class="social__item social__item_btn"></a>
-                    <a href="#" target="_blank" class="social__item social__item_tw"></a>
-                    <a href="#" target="_blank" class="social__item social__item_fb"></a>
+                    <a href="mailto:support@iconsmind.com" target="_blank" class="social__item social__item_mail"></a>
+                    <a href="https://dribbble.com/iconsmind" target="_blank" class="social__item social__item_btn"></a>
+                    <a href="https://twitter.com/icons_mind" target="_blank" class="social__item social__item_tw"></a>
+                    <a href="https://www.facebook.com/iconsmind7" target="_blank" class="social__item social__item_fb"></a>
                 </div>
                 <!-- /social -->
 
