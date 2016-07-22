@@ -19,8 +19,7 @@ get_header('default'); ?>
 
             <!-- social-networks -->
             <div class="social-networks social-networks_center">
-                <span>Spread the love</span>
-                <a href="#" target="_blank" class="social-networks__item">
+                <a href="https://www.facebook.com/iconsmind7" target="_blank" class="social-networks__item">
 
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                          viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
@@ -29,7 +28,7 @@ get_header('default'); ?>
                             </svg>
 
                 </a>
-                <a href="#" target="_blank" class="social-networks__item">
+                <a href="https://twitter.com/icons_mind" target="_blank" class="social-networks__item">
 
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                          viewBox="0 0 512.002 512.002" style="enable-background:new 0 0 512.002 512.002;"
@@ -45,7 +44,7 @@ get_header('default'); ?>
                             </svg>
 
                 </a>
-                <a href="#" target="_blank" class="social-networks__item">
+                <a href="https://plus.google.com/101866714941738670175" target="_blank" class="social-networks__item">
 
                     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                          viewBox="0 0 508.52 508.52" style="enable-background:new 0 0 508.52 508.52;" xml:space="preserve">
@@ -80,17 +79,11 @@ get_header('default'); ?>
 
             <!-- download-icons -->
             <div class="download-icons">
-                <form action="//vectorain.us4.list-manage.com/subscribe/post?u=61927fc103d96b8ec388bf0fe&amp;id=9af64abdb1" method="post" data-thank = "/thanks-for-download/" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank>
 
-                <!-- download-icons__title -->
-                <span class="download-icons__title">Subscribe to our newsletter to get your free 100 icons</span>
-                <!-- /download-icons__title -->
+                <?= do_shortcode('
+             
+                [mc4wp_form id="3967"]'); ?>
 
-                <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="E-mail" required/>
-                <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_61927fc103d96b8ec388bf0fe_9af64abdb1" tabindex="-1" value=""></div>
-                <button type="submit" id="mc-embedded-subscribe" class="btn btn_3"><span>Download</span></button>
-
-                </form>
 
             </div>
             <!-- /download-icons -->

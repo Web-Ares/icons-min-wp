@@ -16,7 +16,7 @@ get_header('default'); ?>
             <div>
                 <h2 class="site__title site__title_6 site__title_6-1">Thank you</h2>
                 <p>Your transaction has been completed successfully. We have emailed you details of your order.</p>
-                <a href="#" class="btn btn_7"><span>Download</span></a>
+                <a href="<?= do_shortcode('[download id="1"]') ?>" class="btn btn_7"><span>Download</span></a>
 
             </div>
 
