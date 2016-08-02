@@ -1,6 +1,7 @@
 <?php
 /** Enable W3 Total Cache Edge Mode */
-define('WP_CACHE', true); //Added by WP-Cache Manager
+//define('WP_CACHE', true); //Added by WP-Cache Manager
+define( 'WPCACHEHOME', '/Users/aleksandrnikolajcuk/www/icons-mind-wp/wp-content/plugins/wp-super-cache/' ); //Added by WP-Cache Manager
 define('W3TC_EDGE_MODE', true); // Added by W3 Total Cache
 
 
@@ -43,7 +44,7 @@ define('DB_CHARSET', 'utf8mb4');
 
 /** The Database Collate type. Don't change this if in doubt. */
 define('DB_COLLATE', '');
-
+define('WP_POST_REVISIONS', false);
 
 define( 'WPCF7_AUTOP', false );
 /**#@+

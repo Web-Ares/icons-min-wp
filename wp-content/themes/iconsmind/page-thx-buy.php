@@ -2,7 +2,44 @@
 /**
  * Template Name: Thanks for Buy Page
  */
-get_header('default'); ?>
+get_header('default');
+
+
+// First, let's check that this visit to the page contains the values we need.
+if(!empty($_GET['checkout_id'])) {
+    // Let's grab the values Paddle sent, and assign them to variables, with defaults.
+    $checkout_id = (!empty($_GET['checkout_id'])) ? $_GET['checkout_id'] : '';
+    $order_total = (!empty($_GET['order_total'])) ? $_GET['order_total'] : 0.00;
+    $quantity = (!empty($_GET['quantity'])) ? $_GET['quantity'] : 1;
+    $item_total = (!empty($_GET['item_total'])) ? $_GET['item_total'] : 0.00;
+    $currency_code = (!empty($_GET['currency_code'])) ? $_GET['currency_code'] : 'USD';
+    $product_name = (!empty($_GET['product_name'])) ? addslashes($_GET['product_name']) : 'Unknown Product';
+
+
+    // If we have a checkout, let's track it!
+    $track = true;
+} else {
+    // If we don't (ie. someones visited the success page, not via a checkout) we won't track it.
+    $track = false;
+}
+?>
+
+<script type="text/javascript">
+
+    dataLayer.push({
+        "event":    "checkout",
+        "price":    '<?php echo $item_total; ?>',
+        "quantity": '<?php echo $quantity; ?>',
+        "currency": '<?php echo $currency_code; ?>',
+        "id":       '<?php echo $checkout_id; ?>',
+        "revenue":  '<?php echo $order_total; ?>',
+        "name" :    '<?php echo $product_name; ?>'
+    });
+
+    adoric.trigger('Purchase', <?php echo $item_total; ?>);
+
+</script>
+
 
 
 <!-- site__content -->

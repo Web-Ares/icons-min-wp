@@ -30,14 +30,19 @@ get_header('default'); ?>
         <div class="site__center">
 
 
-            <?php
+            <?php $flag = 0;
+            if( have_rows('icon_packs') ):
 
-            $flag = 0;
-            if( have_rows('icon_packs') ): ?>
+                $links[0]=496050;
+                $links[1]=496051; ?>
+
             <!-- packages__items -->
             <div class="packages__items">
                 <?php // loop through the rows of data
-                while ( have_rows('icon_packs') ) : the_row(); ?>
+                while ( have_rows('icon_packs') ) : the_row();
+
+                    $cost = get_sub_field( 'cost' );
+                    ?>
 
                     <!-- packages__item -->
                     <div class="packages__item <?if($flag>0){echo 'packages__item_premium';} ?>">
@@ -45,7 +50,7 @@ get_header('default'); ?>
                         <h2 class="packages__title"><?php the_sub_field( 'title_of_the_pack' ); ?> <?if($flag>0){echo '<span class="packages__title-popular">popular</span> ';} ?></h2>
 
                         <!-- packages__price -->
-                        <div class="packages__price"><span>$</span><?php the_sub_field( 'cost' ); ?></div>
+                        <div class="packages__price"><span>$</span><?= $cost;  ?></div>
                         <!-- /packages__price -->
 
                         <!-- packages__text -->
@@ -55,7 +60,11 @@ get_header('default'); ?>
                         <!-- /packages__text -->
 
 
-                        <a href="#" class="btn btn_4"><span>Buy now</span></a>
+                        <?php
+                       echo  '<a href="#" class="btn btn_4 paddle_button" data-product="'.$links[$flag].'" data-theme="none" data-product_name="Standard"
+                            rel="nofollow" data-referrer="AwesomePodcast"
+                            data-price="'.$cost.'"><span>Buy now</span></a>'; ?>
+
 
                     </div>
                     <!-- /packages__item -->

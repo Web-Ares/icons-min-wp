@@ -123,6 +123,8 @@ function add_js()
     elseif(is_page_template('page-pricing.php')){
 
         wp_enqueue_style('pricing', get_template_directory_uri() . '/dist/css/pricing.css');
+        wp_register_script('checkout', 'https://paddle.s3.amazonaws.com/checkout/checkout.js', false, '2.1.3', true);
+        wp_enqueue_script('checkout');
     }
     elseif(is_page_template('page-support.php')){
         wp_enqueue_style('support', get_template_directory_uri() . '/dist/css/support.css');

@@ -33,7 +33,8 @@ get_header('default'); ?>
         <div class="site__center">
 
            <?php
-
+            $pricing_page = get_permalink(93);
+           $count_group=1;
             $args = array(
             'posts_per_page' => -1,
             'post_type' => 'icons',
@@ -57,11 +58,22 @@ get_header('default'); ?>
                 <!-- /icons-set__pic -->
 
 
-            <?php }
-
+            <?php
+                $count_group++;
+                if($count_group==6){
+                    echo '   
+                    </div>
+                    <a href="'.$pricing_page.'" class="btn btn_2 btn_2-1"><span>Buy now</span></a>
+                    <div class="site__center">';
+                    $count_group=1;
+                }
+            }
+            if($count_group!=1){
+                echo '<a href="'.$pricing_page.'" class="btn btn_2 btn_2-1"><span>Buy now</span></a>';
+            }
            wp_reset_query(); ?>
 
-            <a href="<?= get_the_permalink(93)?>" class="btn btn_2 btn_2-1"><span>Buy now</span></a>
+
         </div>
         <!-- /site__center -->
 
