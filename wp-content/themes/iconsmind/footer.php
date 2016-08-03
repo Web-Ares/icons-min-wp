@@ -69,7 +69,7 @@
         });
     }
 
-    $('.hero__play').on({
+    $('[data-popup="video"]').on({
         click: function() {
             player.playVideo();
         }
