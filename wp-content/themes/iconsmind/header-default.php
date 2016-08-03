@@ -28,28 +28,40 @@
     })(window, document, 'script', 'dataLayer', 'GTM-WG2HSZ');</script>
 <!-- End Google Tag Manager -->
 
+<?php if(is_page_template('page-pricing.php')){ ?>
+    <script type="text/javascript">
+        Paddle.Setup({
+            vendor: 7843,
+            debug: true
+        });
+    </script>
+<?php }?>
 
 <?php if (is_page() || is_single() || is_singular() || is_404()) {
     the_post();
 }
-
+$site__header_stick ='';
 if(is_singular('post')){
     $active = 'site_purple';
 }
-elseif(is_page_template(array('page-thx-down.php','page-thx-buy.php'))){
+elseif(is_page_template(array('page-thx-buy.php'))){
     $active = 'site_white';
+}
+elseif(is_page_template('page-thx-down.php')){
+    $active = 'site_no-footer site_white';
+    $site__header_stick = 'site__header_stick';
 }
 else {
     $active = 'site_black';
 }
 ?>
-distdist
+
 
 <!-- site -->
 <div class="site <?= $active; ?>">
-
+    
     <!-- site__header -->
-    <header class="site__header">
+    <header class="site__header <?= $site__header_stick; ?>">
 
         <!-- site__header__layout -->
         <div class="site__header__layout">
@@ -428,7 +440,10 @@ distdist
             <!-- /header-menu__mobile-item -->
 
             <!-- header-menu__item -->
+            <?php if(!is_page_template('page-thx-down.php')):?>
             <a href="<?=  $view; ?>" class="site__header__item">View Icons</a>
+            <?php endif; ?>
+
             <!-- /header-menu__item -->
             <?php if(!is_page_template('page-pricing.php') && !is_singular('post') && !is_home() ): ?>
             <!-- header-menu__item -->

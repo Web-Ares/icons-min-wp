@@ -15,7 +15,7 @@ get_header('default'); ?>
         <div class="thank-you__wrap">
             <div>
                 <h2 class="site__title site__title_6 site__title_6-1">Thank you</h2>
-                <p>Your transaction has been completed successfully. We have emailed you details of your order.</p>
+                <p>Download your free trial 100 icons by click on the download icon</p>
                 <a href="<?= do_shortcode('[download id="1"]') ?>" class="btn btn_7"><span>Download</span></a>
 
             </div>

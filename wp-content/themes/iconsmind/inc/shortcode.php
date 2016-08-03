@@ -48,12 +48,13 @@ function get_menus($post_id, $menu_name)
 
 function similar_posts($post_id = false)
 {
-
+   
     $args = array(
         'posts_per_page' => 3,
         'post_type' => 'post',
         'post_status' => 'publish',
         'post__not_in' => array($post_id),
+        'orderby' => 'rand'
     );
     $q = new WP_Query($args);
 

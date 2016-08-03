@@ -18,7 +18,7 @@
 <div class="site site_no-footer site_white">
 
     <!-- site__header -->
-    <header class="site__header">
+    <header class="site__header site__header_stick">
 
         <!-- site__header__layout -->
         <div class="site__header__layout">
@@ -210,6 +210,14 @@
             <a href="#" class="site__header__mobile-item">ICONS</a>
             <!-- /header-menu__mobile-item -->
 
+            <!-- header-menu__item -->
+            <a href="#" class="site__header__item">View Icons</a>
+            <!-- /header-menu__item -->
+
+            <!-- header-menu__item -->
+            <a href="#" class="site__header__item site__header__item_pricing">Pricing</a>
+            <!-- /header-menu__item -->
+
             <!-- site__header__menu-drop -->
             <a class="site__header__menu-btn" href="#"><span></span></a>
             <!-- /site__header__menu-drop -->
@@ -289,7 +297,7 @@
             <div class="thank-you__wrap">
                 <div>
                     <h2 class="site__title site__title_6 site__title_6-1">Thank you</h2>
-                    <p>Your transaction has been completed successfully. We have emailed you details of your order.</p>
+                    <p>Download your free trial 100 icons by click on the download icon</p>
                     <a href="#" class="btn btn_7"><span>Download</span></a>
 
                 </div>
@@ -403,8 +411,11 @@
 
                 <div class="video-popup__frame">
                     <div>
-                        <iframe width="420" height="315" src="https://www.youtube.com/embed/lcFYdgZKZxY" frameborder="0" allowfullscreen></iframe>                    </div>
-                </div>
+                        <iframe id="player" type="text/html" width="640" height="390"
+                                src="http://www.youtube.com/embed/lcFYdgZKZxY?enablejsapi=1"
+                                frameborder="0"></iframe>
+                    </div>
+                    </div>
 
             </div>
             <!-- /video-popup__content -->
@@ -422,5 +433,36 @@
 <script src="js/vendors/jquery-2.2.1.min.js"></script>
 <script src="js/vendors/jquery.nicescroll.min.js"></script>
 <script src="js/main.min.js"></script>
+    <script>
+
+        // Load the IFrame Player API code asynchronously.
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/player_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        // Replace the 'ytplayer' element with an <iframe> and
+        // YouTube player after the API code downloads.
+        var player;
+        function onYouTubePlayerAPIReady() {
+            player = new YT.Player('player', {
+
+            });
+        }
+
+        $('.hero__play').on({
+            click: function() {
+                player.playVideo();
+            }
+        });
+
+        $( '.popup, .popup__close, .popup__cancel' ).on({
+            click: function() {
+                player.pauseVideo();
+            }
+        });
+
+
+    </script>
 </body>
 </html>

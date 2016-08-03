@@ -1,5 +1,5 @@
 
-
+<?php if(!is_page_template('page-thx-down.php')):?>
 <!-- site__footer -->
 <footer class="site__footer">
 
@@ -11,7 +11,7 @@
 
 </footer>
 <!-- /site__footer -->
-
+<?php endif; ?>
 <?php wp_footer(); ?>
 </div>
 <!-- /site -->
@@ -32,7 +32,10 @@
 
                 <div class="video-popup__frame">
                     <div>
-                        <iframe width="420" height="315" src="https://www.youtube.com/embed/lcFYdgZKZxY" frameborder="0" allowfullscreen></iframe>                    </div>
+                        <iframe id="player" type="text/html" width="640" height="390"
+                                src="http://www.youtube.com/embed/lcFYdgZKZxY?enablejsapi=1"
+                                frameborder="0"></iframe>
+                    </div>
                 </div>
 
             </div>
@@ -49,6 +52,36 @@
 
 
 
+<script>
 
+    // Load the IFrame Player API code asynchronously.
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/player_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    // Replace the 'ytplayer' element with an <iframe> and
+    // YouTube player after the API code downloads.
+    var player;
+    function onYouTubePlayerAPIReady() {
+        player = new YT.Player('player', {
+
+        });
+    }
+
+    $('.hero__play').on({
+        click: function() {
+            player.playVideo();
+        }
+    });
+
+    $( '.popup, .popup__close, .popup__cancel' ).on({
+        click: function() {
+            player.pauseVideo();
+        }
+    });
+
+
+</script>
 </body>
 </html>

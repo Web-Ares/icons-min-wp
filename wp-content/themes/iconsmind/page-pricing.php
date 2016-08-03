@@ -45,9 +45,12 @@ get_header('default'); ?>
                     ?>
 
                     <!-- packages__item -->
-                    <div class="packages__item <?if($flag>0){echo 'packages__item_premium';} ?>">
+                    <div class="packages__item <?if ($flag>0){ echo 'packages__item_premium'; } ?>">
 
-                        <h2 class="packages__title"><?php the_sub_field( 'title_of_the_pack' ); ?> <?if($flag>0){echo '<span class="packages__title-popular">popular</span> ';} ?></h2>
+                        <h2 class="packages__title"><?php the_sub_field( 'title_of_the_pack' ); ?>
+                            
+                            <?php if($flag>0){ echo '<span class="packages__title-popular">popular</span> '; } ?>
+                        </h2>
 
                         <!-- packages__price -->
                         <div class="packages__price"><span>$</span><?= $cost;  ?></div>
