@@ -48,7 +48,7 @@ function get_menus($post_id, $menu_name)
 
 function similar_posts($post_id = false)
 {
-   
+    remove_all_filters('posts_orderby');
     $args = array(
         'posts_per_page' => 3,
         'post_type' => 'post',
