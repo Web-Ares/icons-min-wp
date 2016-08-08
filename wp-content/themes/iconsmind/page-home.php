@@ -46,77 +46,7 @@ get_header(); ?>
     </div>
     <!-- /hero -->
 
-    <!-- sponsors -->
-    <div class="sponsors">
 
-        <!-- sponsors__inner -->
-        <div class="sponsors__inner">
-            <div>
-                <?php if($var=get_field('wix')): ?>
-                <!-- sponsors__inner -->
-                <a href="<?= $var; ?>" class="sponsors__item">
-
-                    <img src="http://iconsmind.websters.com.ua/wp-content/themes/iconsmind/dist/pic/sponsor1.png" width="64" height="25" alt="">
-
-                </a>
-                <!-- /sponsors__inner -->
-                <?php endif;
-                if($var=get_field('bookingcom')):
-                ?>
-                <!-- sponsors__inner -->
-                <a href="<?= $var; ?>"  class="sponsors__item">
-
-                    <img src="http://iconsmind.websters.com.ua/wp-content/themes/iconsmind/dist/pic/sponsor2.png" width="165" height="27" alt="">
-
-                </a>
-                <!-- /sponsors__inner -->
-                <?php endif;
-                if($var=get_field('lyndacom')):
-                ?>
-                <!-- sponsors__inner -->
-                <a href="<?= $var; ?>"  class="sponsors__item">
-
-                    <img src="http://iconsmind.websters.com.ua/wp-content/themes/iconsmind/dist/pic/sponsor3.png" width="143" height="35" alt="">
-
-                </a>
-                <!-- /sponsors__inner -->
-                <?php endif;
-                if($var=get_field('heroku')):
-                ?>
-                <!-- sponsors__inner -->
-                <a href="<?= $var; ?>"  class="sponsors__item">
-
-                    <img src="http://iconsmind.websters.com.ua/wp-content/themes/iconsmind/dist/pic/sponsor4.png" width="116" height="34" alt="">
-
-                </a>
-                <!-- /sponsors__inner -->
-                <?php endif;
-                if($var=get_field('cisco')):
-                ?>
-                <!-- sponsors__inner -->
-                <a href="<?= $var; ?>"  class="sponsors__item">
-
-                    <img src="http://iconsmind.websters.com.ua/wp-content/themes/iconsmind/dist/pic/sponsor5.png" width="62" height="33" alt="">
-
-                </a>
-                <!-- /sponsors__inner -->
-                <?php endif;
-                if($var=get_field('frank_digital')):
-                ?>
-                <!-- sponsors__inner -->
-                <a href="<?= $var; ?>"  class="sponsors__item">
-
-                    <img src="http://iconsmind.websters.com.ua/wp-content/themes/iconsmind/dist/pic/sponsor6.png" width="122" height="34" alt="">
-
-                </a>
-                <!-- /sponsors__inner -->
-                <?php endif; ?>
-            </div>
-        </div>
-        <!-- /sponsors__inner -->
-
-    </div>
-    <!-- /sponsors -->
 
     <?php the_field( 'first_part_of_content' ); ?>
 

@@ -38,77 +38,8 @@ get_header('default'); ?>
                 </div>
 
 
-                <!-- sponsors -->
-                <div class="sponsors">
+               <?php the_field('content')?>
 
-                    <!-- sponsors__inner -->
-                    <div class="sponsors__inner">
-                        <div>
-                            <?php if($var=get_field('wix',8)): ?>
-                                <!-- sponsors__inner -->
-                                <a href="<?= $var; ?>" class="sponsors__item">
-
-                                    <img src="http://iconsmind.websters.com.ua/wp-content/themes/iconsmind/dist/pic/sponsor1.png" width="64" height="25" alt="">
-
-                                </a>
-                                <!-- /sponsors__inner -->
-                            <?php endif;
-                            if($var=get_field('bookingcom',8)):
-                                ?>
-                                <!-- sponsors__inner -->
-                                <a href="<?= $var; ?>"  class="sponsors__item">
-
-                                    <img src="http://iconsmind.websters.com.ua/wp-content/themes/iconsmind/dist/pic/sponsor2.png" width="165" height="27" alt="">
-
-                                </a>
-                                <!-- /sponsors__inner -->
-                            <?php endif;
-                            if($var=get_field('lyndacom',8)):
-                                ?>
-                                <!-- sponsors__inner -->
-                                <a href="<?= $var; ?>"  class="sponsors__item">
-
-                                    <img src="http://iconsmind.websters.com.ua/wp-content/themes/iconsmind/dist/pic/sponsor3.png" width="143" height="35" alt="">
-
-                                </a>
-                                <!-- /sponsors__inner -->
-                            <?php endif;
-                            if($var=get_field('heroku',8)):
-                                ?>
-                                <!-- sponsors__inner -->
-                                <a href="<?= $var; ?>"  class="sponsors__item">
-
-                                    <img src="http://iconsmind.websters.com.ua/wp-content/themes/iconsmind/dist/pic/sponsor4.png" width="116" height="34" alt="">
-
-                                </a>
-                                <!-- /sponsors__inner -->
-                            <?php endif;
-                            if($var=get_field('cisco',8)):
-                                ?>
-                                <!-- sponsors__inner -->
-                                <a href="<?= $var; ?>"  class="sponsors__item">
-
-                                    <img src="http://iconsmind.websters.com.ua/wp-content/themes/iconsmind/dist/pic/sponsor5.png" width="62" height="33" alt="">
-
-                                </a>
-                                <!-- /sponsors__inner -->
-                            <?php endif;
-                            if($var=get_field('frank_digital',8)):
-                                ?>
-                                <!-- sponsors__inner -->
-                                <a href="<?= $var; ?>"  class="sponsors__item">
-
-                                    <img src="http://iconsmind.websters.com.ua/wp-content/themes/iconsmind/dist/pic/sponsor6.png" width="122" height="34" alt="">
-
-                                </a>
-                                <!-- /sponsors__inner -->
-                            <?php endif; ?>
-                        </div>
-                    </div>
-                    <!-- /sponsors__inner -->
-
-                </div>
-                <!-- /sponsors -->
 
             </div>
         </div>
