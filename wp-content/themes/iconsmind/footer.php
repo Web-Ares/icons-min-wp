@@ -33,7 +33,7 @@
                 <div class="video-popup__frame">
                     <div>
                         <iframe id="player" type="text/html" width="640" height="390"
-                                src="http://www.youtube.com/embed/lcFYdgZKZxY?enablejsapi=1"
+                                src="https://www.youtube.com/embed/lcFYdgZKZxY?enablejsapi=1"
                                 frameborder="0"></iframe>
                     </div>
                 </div>

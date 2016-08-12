@@ -8,7 +8,9 @@
     <meta name="format-detection" content="address=no">
     <?= favicons(); ?>
     <title><?php document_title(); ?></title>
-    <?php wp_head(); ?>
+    <?php wp_head();
+    $url = home_url( '/', 'https' );
+    ?>
 
 </head>
 <body>
@@ -26,7 +28,7 @@
         j.src =
             '//www.googletagmanager.com/gtm.js?id=' + i + dl;
         f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-WG2HSZ');</script>
+    })(window, document, 'script', 'dataLayer', 'GTM-N9R57F');</script>
 <!-- End Google Tag Manager -->
 
 <?php if(is_page_template('page-pricing.php')){ ?>
@@ -252,7 +254,7 @@ else {
                 <!-- /logo -->
             <?php } else { ?>
                 <!-- logo -->
-                <a href="<?php echo home_url(); ?>" class="logo">
+                <a href="<?php echo esc_url( $url ); ?>" class="logo">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                          width="207px" height="50px" viewBox="0 0 207 50" enable-background="new 0 0 207 50" xml:space="preserve">
                     <path d="M126.848,19.338c-0.721-0.505-1.824-0.758-3.311-0.758c-0.809,0-1.621,0.12-2.441,0.354
