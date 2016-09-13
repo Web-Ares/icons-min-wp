@@ -88,7 +88,9 @@ get_header(); ?>
                             <div>
                                 <img src=" <?php the_sub_field('choose_the_image'); ?>" width="60" height="60" alt="">
                             </div>
-
+                            <?php if($avatar = get_sub_field('choose_the_logo')): ?>
+                            <img class="reviews__avatar-company" src="<?= $avatar; ?>" width="35" height="35" alt="">
+                            <?php endif; ?>
                         </div>
                         <!-- /reviews__avatar -->
 
