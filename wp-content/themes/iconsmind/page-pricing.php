@@ -66,8 +66,7 @@ get_header('default'); ?>
                         <?php
                        echo  '<a href="#" class="btn btn_4 paddle_button" data-product="'.$links[$flag].'" data-theme="none" data-product_name="Standard"
                             rel="nofollow" data-referrer="AwesomePodcast"
-                            data-price="'.$cost.'" data-success="/thanks-for-buy/"><span>Buy now</span></a>'; ?>
-
+                            data-price="'.$cost.'"><span>Buy now</span></a>'; ?>
 
                     </div>
                     <!-- /packages__item -->

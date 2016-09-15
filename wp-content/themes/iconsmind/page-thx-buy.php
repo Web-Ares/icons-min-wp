@@ -22,6 +22,11 @@ if(!empty($_GET['checkout_id'])) {
     // If we don't (ie. someones visited the success page, not via a checkout) we won't track it.
     $track = false;
 }
+
+var_dump($_GET);
+echo $_GET['checkout_id'];
+echo $_GET['order_total'];
+echo $_GET['quantity'];
 ?>
 
 <script type="text/javascript">
