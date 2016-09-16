@@ -62,7 +62,6 @@ get_header('default'); ?>
                         </div>
                         <!-- /packages__text -->
 
-
                         <?php
                        echo  '<a href="#" class="btn btn_4 paddle_button" data-product="'.$links[$flag].'" data-theme="none" data-product_name="Standard"
                             rel="nofollow" data-referrer="AwesomePodcast"
