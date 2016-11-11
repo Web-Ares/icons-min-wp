@@ -11,7 +11,9 @@
     <?php wp_head();
     $url = home_url( '/', 'https' );
     ?>
-
+    <?php if(is_page_template('page-privacy.php')){ ?>
+    <script src="https://www.google-analytics.com/analytics.js"></script>
+    <?php  } ?>
 </head>
 <body>
 

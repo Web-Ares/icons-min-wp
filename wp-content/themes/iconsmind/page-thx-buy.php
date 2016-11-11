@@ -23,16 +23,20 @@ if(!empty($_GET['checkout_id'])) {
     $track = false;
 }
 
-var_dump($_GET);
-echo $_GET['checkout_id'];
-echo $_GET['order_total'];
-echo $_GET['quantity'];
+
+
+ echo $item_total.' = $item_total';
+ echo $quantity.' = $quantity';
+ echo $currency_code.' = $currency_code';
+ echo $checkout_id.' = $checkout_id';
+ echo $order_total.' = $order_total';
+ echo $product_name.' = $product_name';
 ?>
 
 <script type="text/javascript">
 
     dataLayer.push({
-        "event":    "checkout",
+        "event":    "Checkout.PaymentComplete",
         "price":    '<?php echo $item_total; ?>',
         "quantity": '<?php echo $quantity; ?>',
         "currency": '<?php echo $currency_code; ?>',
@@ -41,7 +45,7 @@ echo $_GET['quantity'];
         "name" :    '<?php echo $product_name; ?>'
     });
 
-    adoric.trigger('Purchase', <?php echo $item_total; ?>);
+//    adoric.trigger('Purchase', <?php //echo $item_total; ?>//);
 
 </script>
 
